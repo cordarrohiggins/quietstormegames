@@ -12,6 +12,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* — Force game shots to match 1008×491 ratio of pic01.jpg — */
+      #games .post .image.main {
+        height: 491px;
+        overflow: hidden;
+      }
+      #games .post .image.main img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* — Polish up the footer split layout — */
+      #footer .fields .field input,
+      #footer .fields .field textarea {
+        width: 100%;
+        padding: 0.75em;
+        border: 1px solid #ccc;
+        background: #fafafa;
+        margin-bottom: 1em;
+        box-shadow: none;
+      }
+      #footer .split.contact {
+        margin-top: 2.5em;
+      }
+    </style>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
@@ -83,9 +111,9 @@
               <p>My first dive into game developement with GameMaker.</p>
             </header>
             <!-- replace `game1.jpg` with your actual screenshot -->
-            <a href="game1.html" class="image fit">
-              <img src="images/game1.jpg" alt="Screenshot of Game Title One" />
-            </a>
+            <span class="image main">
+              <img src="images/game1.jpg" alt="Screenshot of Motivate" />
+            </span>
             <ul class="actions special">
               <li>
                 <a href="game1.html" class="button">Learn More</a>
@@ -102,9 +130,9 @@
               <p>A short story driven game about brotherly connection, memory, and moving on.</p>
             </header>
             <!-- replace `game2.jpg` with your actual screenshot -->
-            <a href="game2.html" class="image fit">
-              <img src="images/game2.jpg" alt="Screenshot of Game Title Two" />
-            </a>
+            <span class="image main">
+              <img src="images/game2.jpg" alt="Screenshot of When the Sky Took You" />
+            </span>
             <ul class="actions special">
               <li>
                 <a href="game2.html" class="button">Learn More</a>
@@ -117,6 +145,8 @@
 
       <!-- Footer / Contact -->
       <footer id="footer">
+
+        <!-- Contact form -->
         <section>
           <form method="post" action="#">
             <div class="fields">
@@ -130,7 +160,7 @@
               </div>
               <div class="field">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" rows="3"></textarea>
+                <textarea name="message" id="message" rows="4"></textarea>
               </div>
             </div>
             <ul class="actions">
@@ -138,18 +168,13 @@
             </ul>
           </form>
         </section>
-        <!-- 
-	<section class="split contact">
-          <section class="alt">
-            <h3>Address</h3>
-            <p>123 Gaming Lane<br />
-               Suite 42<br />
-               Anytown, USA</p>
-          </section> 
-	-->
+
+        <!-- Studio contact info & socials -->
+        <section class="split contact">
+          
           <section>
             <h3>Phone</h3>
-            <p><a href="tel:+10000000000">(803) 412-5133</a></p>
+            <p><a href="tel:+18034125133">(803) 412-5133</a></p>
           </section>
           <section>
             <h3>Email</h3>
@@ -158,29 +183,14 @@
           <section>
             <h3>Social</h3>
             <ul class="icons alt">
-              <li>
-                <a href="https://x.com/QuietStormeGame" class="icon brands alt fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCM5QeEyYFJGCKQ0mynOTedA" class="icon brands alt fa-youtube">
-                  <span class="label">YouTube</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/quiet_storme_games/" class="icon brands alt fa-instagram">
-                  <span class="label">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/cordarrohiggins" class="icon brands alt fa-github">
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
+              <li><a href="https://x.com/QuietStormeGame" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCM5QeEyYFJGCKQ0mynOTedA" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+              <li><a href="https://www.instagram.com/quiet_storme_games/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="https://github.com/cordarrohiggins" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
             </ul>
           </section>
         </section>
+
       </footer>
 
       <!-- Copyright -->
