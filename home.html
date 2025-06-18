@@ -39,6 +39,38 @@
       #footer .split.contact {
         margin-top: 2.5em;
       }
+      /* Devlog grid and card styling */
+      #recent-devlogs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2em;
+        margin-top: 1em;
+      }
+      #recent-devlogs .post {
+        background: #fafafa;
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+      }
+      #recent-devlogs .post header h3 {
+        margin: 0 0 0.25em;
+        font-size: 1.3em;
+      }
+      #recent-devlogs .post header .info {
+        color: #777;
+        font-style: italic;
+        margin-bottom: 1em;
+      }
+      #recent-devlogs .post p {
+        flex: 1;
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+      #recent-devlogs .post .actions {
+        text-align: right;
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -94,7 +126,7 @@
             </a>
           </li>
 	  <li>
-    	    <a href="https://www.linkedin.com/in/cordarro-higgins-redman" class="icon brands alt fa-linkedin">
+    	    <a href="https://www.linkedin.com/in/cordarro-higgins-redman/" class="icon brands alt fa-linkedin">
               <span class="label">LinkedIn</span>
             </a>
   	  </li>
@@ -150,27 +182,39 @@
           </article>
         </section>
 
-	<!-- Recent Devlogs Section -->
-        <section class="header-section" style="margin-top:3em;">
-          <header>
+	<!-- Recent Devlogs Header -->
+	<section class="header-section" style="margin-top:3em;">
+  	  <header>
             <h2>Recent Devlogs</h2>
             <p>Insights into the journey</p>
           </header>
         </section>
-        <section id="recent-devlogs" class="posts">
+
+        <!-- Devlog Cards -->
+        <section id="recent-devlogs">
           <article class="post">
             <header>
               <h3><a href="devlog1.html">Devlog #1: Building the Website</a></h3>
               <p class="info">June 18, 2025</p>
             </header>
+            <p>
+              Today marks the first step in bringing Quiet Storme Games online. I set up GitHub Pages, customized the template to match our branding, and wired up a contact form. The homepage now loads lightning-fast on desktop and mobile.
+            </p>
+            <ul class="actions special">
+              <li><a href="devlog1.html" class="button">Read More</a></li>
+            </ul>
           </article>
+
+          <!-- Future devlog cards will stack here -->
         </section>
 
         <!-- Logo Image -->
         <section id="logo" style="text-align:center; margin:4em 0;">
-          <img src="images/QuietStormeGamesIcon.png" 
-               alt="Quiet Storme Games Logo" 
-               style="max-width:200px; height:auto;" />
+  	   <img
+    	      src="images/QuietStormeGamesIcon.png"
+    	      alt="Quiet Storme Games Logo"
+              style="max-width:400px; width:100%; height:auto;"
+           />
         </section>
 
       </div> <!-- /#main -->
@@ -219,7 +263,7 @@
               <li><a href="https://www.youtube.com/channel/UCM5QeEyYFJGCKQ0mynOTedA" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
               <li><a href="https://www.instagram.com/quiet_storme_games/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
               <li><a href="https://github.com/cordarrohiggins" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-	      <li><a href="https://www.linkedin.com/in/cordarro-higgins-redman" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+	      <li><a href="https://www.linkedin.com/in/cordarro-higgins-redman/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
             </ul>
           </section>
         </section>
