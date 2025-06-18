@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* — Force game shots to match 1008×491 ratio of pic01.jpg — */
+      #games .post .image.main {
+        height: 491px;
+        overflow: hidden;
+      }
+      #games .post .image.main img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body class="is-preload">
     <div id="wrapper" class="fade-in">
@@ -40,7 +54,7 @@
           <article class="post">
             <header>
               <h2><a href="motivate.html">Motivate</a></h2>
-              <p>My first dive into game development with GameMaker.</p>
+              <p>My first true dive into game developement and creation with GameMaker.</p>
             </header>
             <span class="image main">
               <img src="images/motivate.jpg" alt="Motivate screenshot" />
