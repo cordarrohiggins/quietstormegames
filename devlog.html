@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* Devlog Index: Card Grid */
+      #devlog {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2em;
+        margin-top: 1em;
+      }
+      #devlog .post {
+        background: #fafafa;
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+      }
+      #devlog .post header h2,
+      #devlog .post header h3 {
+        margin: 0 0 0.25em;
+        font-size: 1.3em;
+      }
+      #devlog .post header .info {
+        color: #777;
+        font-style: italic;
+        margin-bottom: 1em;
+      }
+      #devlog .post p {
+        flex: 1;
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+      #devlog .post .actions {
+        text-align: right;
+      }
+    </style>
   </head>
   <body class="is-preload">
     <div id="wrapper" class="fade-in">
@@ -34,16 +69,23 @@
 
       <!-- Main -->
       <div id="main">
-        <section id="devlog" class="posts">
-
-          <!-- Devlog Entry Link -->
+        <!-- Devlog Index (Card Grid) -->
+        <section id="devlog">
+          <!-- Devlog #1 Card -->
           <article class="post">
             <header>
               <h2><a href="devlog1.html">Devlog #1: Building the Website</a></h2>
               <p class="info">June 18, 2025</p>
             </header>
+            <p>
+              Today marks the first step in bringing Quiet Storme Games online. I set up GitHub Pages, customized the template to match our branding, and wired up a contact form. The homepage now loads lightning-fast on desktop and mobile.
+            </p>
+            <ul class="actions special">
+              <li><a href="devlog1.html" class="button">Read More</a></li>
+            </ul>
           </article>
 
+          <!-- Future devlog cards go here -->
         </section>
       </div> <!-- /#main -->
 
