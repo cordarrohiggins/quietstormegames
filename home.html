@@ -14,17 +14,20 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
       /* — Force game shots to match 1008×491 ratio of pic01.jpg — */
+      /* Center-crop game screenshots by positioning the IMG */
       #games .post .image.main {
-        height: 491px;
-        overflow: hidden;
+        position: relative;    /* establish a containing block */
+        height: 491px;         /* fixed box height */
+        overflow: hidden;      /* crop overflow */
       }
       #games .post .image.main img {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-	object-position: center;
-        display: block;
-        margin: 0 auto;
+        position: absolute;    /* remove from normal flow */
+        top: 50%;              /* move to center vertically */
+        left: 50%;             /* move to center horizontally */
+        transform: translate(-50%, -50%); /* truly center the image */
+        min-width: 100%;       /* ensure it fills horizontally */
+        min-height: 100%;      /* ensure it fills vertically */
+        /* no width/height props here—min-* takes care of cover */
       }
 
       /* — Polish up the footer split layout — */
