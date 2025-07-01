@@ -13,25 +13,20 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      /* Make the wrapper a responsive aspect-ratio box */
+      /* Center-crop game screenshots by positioning the IMG */
       #games .post .image.main {
-    	position: relative !important;
-    	width: 100% !important;
-        aspect-ratio: 1008 / 491 !important;  /* maintain your target ratio */
-        overflow: hidden !important;
+        position: relative;    /* establish a containing block */
+        height: 491px;         /* fixed box height */
+        overflow: hidden;      /* crop overflow */
       }
-
-      /* Absolutely center the IMG inside, and cover the box */
       #games .post .image.main img {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        min-width: 100% !important;
-        min-height: 100% !important;
-        object-fit: cover !important;
-        object-position: center !important;
-        display: block !important;
+        position: absolute;    /* remove from normal flow */
+        top: 50%;              /* move to center vertically */
+        left: 50%;             /* move to center horizontally */
+        transform: translate(-50%, -50%); /* truly center the image */
+        min-width: 100%;       /* ensure it fills horizontally */
+        min-height: 100%;      /* ensure it fills vertically */
+        /* no width/height props here—min-* takes care of cover */
       }
 
       /* — Polish up the footer split layout — */
